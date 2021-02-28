@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Memes</title>
+</head>
+<body>
+
+    <h2> Welcome to Memes display page </h2>
+
+    {% csrf_token %}
+
+    {% for m in allmemes %}
+
+            <tr>
+<!--                <td> {{ m.id }}  </td>-->
+<!--                <td> {{ m.name }} &nbsp;&nbsp;</td>-->
+<!--                <td> {{ m.url }} &nbsp;&nbsp;</td>-->
+
+
+                <img src="{{ m.url }}">
+           </tr>
+
+            <br>
+    {% endfor %}
+
+
+    <a href="/logout1/"> Logout </a>
+
+
+
+</body>
+</html>
